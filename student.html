@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+    <h2>Student Details</h2>
+    <form method="POST" action="/apply" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Name" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="text" name="phone" placeholder="Phone No" required><br>
+        <input type="text" name="pan" placeholder="PAN No" required><br>
+        <input type="file" name="resume" required><br><br>
+
+        <h3>Company List</h3>
+        <select name="company" required>
+            {% for company in companies %}
+                <option value="{{ company['name'] }}">{{ company['name'] }} - {{ company['role'] }} - {{ company['ctc'] }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Apply</button>
+    </form>
+</body>
+</html>
