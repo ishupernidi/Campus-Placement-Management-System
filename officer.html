@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placement Officer</title>
+</head>
+<body>
+    <h2>Add Company</h2>
+    <form method="POST" action="/add_company">
+        <input type="text" name="name" placeholder="Company Name" required><br>
+        <input type="text" name="role" placeholder="Job Role" required><br>
+        <input type="text" name="ctc" placeholder="Salary CTC" required><br>
+        <input type="text" name="eligibility" placeholder="Eligibility Criteria" required><br>
+        <button type="submit">Add Company</button>
+    </form>
+
+    <h2>Registered Students</h2>
+    <ul>
+        {% for student in students %}
+            <li>{{ student['name'] }} - {{ student['email'] }} applied for {{ student['company'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
