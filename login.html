@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Placement Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="POST" action="/login">
+        <label>Select Role:</label><br>
+        <input type="radio" name="role" value="student" required> Student<br>
+        <input type="radio" name="role" value="officer" required> Placement Officer<br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
